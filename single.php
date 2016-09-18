@@ -30,6 +30,4 @@ get_header(); ?>
 		</main>
 	</div>
 <?php
-get_sidebar();
-get_sidebar( '2' );
 get_footer();
