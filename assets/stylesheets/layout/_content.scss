@@ -1,13 +1,18 @@
-.content-area {
-	float: left;
-	width: $size__site-main;
+.site {
+	padding: $size__site-gutter/2;
+	margin: 0 auto;
+	max-width: $size__site-width;
 }
 
-.site-main {
-	margin: 0;
+.site-header {
+	text-align: center;
+}
+
+.content-area {
+	margin: 0 auto;
+	max-width: $size__site-width;
 }
 
 .site-footer {
-	clear: both;
-	width: $size__site-main;
+	text-align: center;
 }

@@ -603,16 +603,20 @@ body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
-.content-area {
-  float: left;
-  width: 100%; }
+.site {
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1200px; }
 
-.site-main {
-  margin: 0; }
+.site-header {
+  text-align: center; }
+
+.content-area {
+  margin: 0 auto;
+  max-width: 1200px; }
 
 .site-footer {
-  clear: both;
-  width: 100%; }
+  text-align: center; }
 
 /*--------------------------------------------------------------
 ## Posts
