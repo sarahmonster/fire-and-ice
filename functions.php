@@ -119,34 +119,6 @@ function fireandice_the_custom_logo() {
 }
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function fireandice_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'fireandice' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar 2', 'fireandice' ),
-		'id'            => 'sidebar-2',
-		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'fireandice_widgets_init' );
-
-/**
  * Enqueue scripts and styles.
  */
 function fireandice_scripts() {
