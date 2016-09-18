@@ -11,9 +11,13 @@
 	display: none;
 }
 
-.single .byline,
 .group-blog .byline {
 	display: inline;
+
+	&::before {
+		display: inline;
+		content: ' \00b7';
+	}
 }
 
 .page-content,
