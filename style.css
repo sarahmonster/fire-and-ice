@@ -702,7 +702,7 @@ object {
   max-width: 100%; }
 
 .wp-caption {
-  margin-bottom: 1.5em;
+  margin: 1em auto 1.5em;
   max-width: 100%; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
@@ -710,6 +710,13 @@ object {
     margin-right: auto; }
   .wp-caption .wp-caption-text {
     margin: 0.8075em 0; }
+
+/* Give some padding to floated elements, to prevent them butting up against text. */
+.wp-caption.alignleft {
+  margin-right: 20px; }
+
+.wp-caption.alignright {
+  margin-left: 20px; }
 
 .wp-caption-text {
   text-align: center; }
