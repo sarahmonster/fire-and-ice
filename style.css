@@ -609,6 +609,7 @@ body {
   max-width: 1200px; }
 
 .site-header {
+  display: none;
   text-align: center; }
 
 .content-area {
@@ -616,6 +617,7 @@ body {
   max-width: 1200px; }
 
 .site-footer {
+  display: none;
   text-align: center; }
 
 /*--------------------------------------------------------------
