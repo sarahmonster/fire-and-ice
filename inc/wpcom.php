@@ -27,3 +27,16 @@ function fireandice_wpcom_setup() {
 	}
 }
 add_action( 'after_setup_theme', 'fireandice_wpcom_setup' );
+
+/*
+ * De-queue Google fonts if custom fonts are being used instead
+ */
+function fireandice_dequeue_fonts() {
+	if ( class_exists( 'TypekitData' ) && class_exists( 'CustomDesign' ) && CustomDesign::is_upgrade_active() ) {
+		$customfonts = TypekitData::get( 'families' );
+		if ( $customfonts && $customfonts['site-title']['id'] && $customfonts['headings']['id'] && $customfonts['body-text']['id'] ) {
+			wp_dequeue_style( 'fireandice-' );
+		}
+	}
+}
+add_action( 'wp_enqueue_scripts', 'fireandice_dequeue_fonts' );

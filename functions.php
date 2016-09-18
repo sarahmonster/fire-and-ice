@@ -119,10 +119,63 @@ function fireandice_the_custom_logo() {
 }
 
 /**
+ * Register Google Fonts
+ */
+function fireandice_fonts_url() {
+	$fonts_url = '';
+
+    /* Translators: If there are characters in your language that are not
+	 * supported by Vidaloka, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$vidaloka = esc_html_x( 'on', 'Vidaloka font: on or off', 'fireandice' );
+	$vollkorn = esc_html_x( 'on', 'Vollkorn font: on or off', 'fireandice' );
+
+	$font_families = array();
+
+	if ( 'off' !== $vidaloka ) {
+		$font_families[] = 'Vidaloka';
+	}
+
+	if ( 'off' !== $vollkorn ) {
+		$font_families[] = 'Vollkorn:400,400i,700,700i';
+	}
+
+	$query_args = array(
+		'family' => urlencode( implode( '|', $font_families ) ),
+		'subset' => urlencode( 'latin,latin-ext' ),
+	);
+
+	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+
+	return $fonts_url;
+
+}
+
+/**
+ * Enqueue Google Fonts for Editor Styles
+ */
+function fireandice_editor_styles() {
+    add_editor_style( array( 'editor-style.css', fireandice_fonts_url() ) );
+}
+add_action( 'after_setup_theme', 'fireandice_editor_styles' );
+
+/**
+ * Enqueue Google Fonts for custom headers
+ */
+function fireandice_admin_scripts( $hook_suffix ) {
+
+	wp_enqueue_style( 'fireandice-fonts', fireandice_fonts_url(), array(), null );
+
+}
+add_action( 'admin_print_styles-appearance_page_custom-header', 'fireandice_admin_scripts' );
+
+/**
  * Enqueue scripts and styles.
  */
 function fireandice_scripts() {
 	wp_enqueue_style( 'fireandice-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'fireandice-fonts', fireandice_fonts_url(), array(), null );
 
 	wp_enqueue_script( 'fireandice-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
