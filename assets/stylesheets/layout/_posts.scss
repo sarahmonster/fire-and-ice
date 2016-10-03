@@ -39,12 +39,19 @@
 }
 
 .entry-title {
-	background: $color__primary;
 	color: white;
-	padding: 5px 10px;
 	position: absolute;
-	transform: skew(0,-7deg);
-	left: 10px;
+		right: -$size__site-gutter;
+	transform: skew(0,-5deg);
+	line-height: 1.8;
+
+	span {
+		background: $color__primary;
+		box-decoration-break: clone;
+		display: inline;
+		padding: 5px 10px;
+	}
+
 }
 
 // For landscape-oriented sites, move entry header info to the left-hand side
@@ -57,7 +64,7 @@
 
   .entry-content {
     display: inline-block;
-    padding-left: $size__site-gutter;
+    padding: $size__site-gutter*4 $size__site-gutter*2;
     width: calc(99% - #{$size__site-sidebar});
   }
 }

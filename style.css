@@ -661,13 +661,18 @@ body {
   right: 0; }
 
 .entry-title {
-  background: #2C315E;
   color: white;
-  padding: 5px 10px;
   position: absolute;
-  -ms-transform: skew(0, -7deg);
-  transform: skew(0, -7deg);
-  left: 10px; }
+  right: -20px;
+  -ms-transform: skew(0, -5deg);
+  transform: skew(0, -5deg);
+  line-height: 1.8; }
+  .entry-title span {
+    background: #2C315E;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    display: inline;
+    padding: 5px 10px; }
 
 @media (orientation: landscape) {
   .entry-header {
@@ -676,7 +681,7 @@ body {
     width: 33%; }
   .entry-content {
     display: inline-block;
-    padding-left: 20px;
+    padding: 80px 40px;
     width: calc(99% - 33%); } }
 
 /*--------------------------------------------------------------
