@@ -663,9 +663,9 @@ body {
 .entry-title {
   color: white;
   position: absolute;
-  right: -20px;
-  -ms-transform: skew(0, -5deg);
-  transform: skew(0, -5deg);
+  top: 20px;
+  left: -20px;
+  transform: perspective(1px) rotate(-5deg);
   line-height: 1.8; }
   .entry-title span {
     background: #2C315E;
@@ -673,6 +673,16 @@ body {
     box-decoration-break: clone;
     display: inline;
     padding: 5px 10px; }
+
+.entry-meta {
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transform: perspective(1px) rotate(-5deg); }
+  .entry-meta a {
+    color: white;
+    text-decoration: none; }
 
 @media (orientation: landscape) {
   .entry-header {

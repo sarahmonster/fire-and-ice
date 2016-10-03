@@ -41,8 +41,9 @@
 .entry-title {
 	color: white;
 	position: absolute;
-		right: -$size__site-gutter;
-	transform: skew(0,-5deg);
+		top: $size__site-gutter;
+		left: -$size__site-gutter;
+	transform: perspective(1px) rotate(-5deg);
 	line-height: 1.8;
 
 	span {
@@ -51,7 +52,19 @@
 		display: inline;
 		padding: 5px 10px;
 	}
+}
 
+.entry-meta {
+	color: white;
+	position: absolute;
+		top: $size__site-gutter;
+		left: $size__site-gutter;
+	transform: perspective(1px) rotate(-5deg);
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
 }
 
 // For landscape-oriented sites, move entry header info to the left-hand side
