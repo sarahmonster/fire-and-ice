@@ -31,11 +31,15 @@
   position: relative;
 }
 
-.post-thumbnail img {
-  position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+.post-thumbnail {
+	overflow: hidden;
+	text-align: center;
+
+	img {
+		height: 40vh;
+		width: auto;
+		max-width: none;
+	}
 }
 
 .entry-title {
@@ -69,15 +73,21 @@
 
 // For landscape-oriented sites, move entry header info to the left-hand side
 @include landscape {
-  .entry-header {
-    display: inline-block;
-    vertical-align: top;
-    width: $size__site-sidebar;
-  }
+	.entry-header {
+		display: inline-block;
+		margin-top: -10px;
+		margin-bottom: -10px;
+		vertical-align: top;
+		width: $size__site-sidebar;
+	}
 
-  .entry-content {
-    display: inline-block;
-    padding: $size__site-gutter*4 $size__site-gutter*2;
-    width: calc(99% - #{$size__site-sidebar});
-  }
+	.post-thumbnail img {
+			height: 100vh;
+	}
+
+	.entry-content {
+		display: inline-block;
+		padding: $size__site-gutter*4 $size__site-gutter*2;
+		width: calc(99% - #{$size__site-sidebar});
+	}
 }

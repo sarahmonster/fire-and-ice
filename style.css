@@ -603,7 +603,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: black;
+  background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
 
 .site {
@@ -654,11 +654,13 @@ body {
 .entry-header {
   position: relative; }
 
-.post-thumbnail img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; }
+.post-thumbnail {
+  overflow: hidden;
+  text-align: center; }
+  .post-thumbnail img {
+    height: 40vh;
+    width: auto;
+    max-width: none; }
 
 .entry-title {
   color: white;
@@ -687,12 +689,16 @@ body {
 @media (orientation: landscape) {
   .entry-header {
     display: inline-block;
+    margin-top: -10px;
+    margin-bottom: -10px;
     vertical-align: top;
-    width: 33%; }
+    width: 40%; }
+  .post-thumbnail img {
+    height: 100vh; }
   .entry-content {
     display: inline-block;
     padding: 80px 40px;
-    width: calc(99% - 33%); } }
+    width: calc(99% - 40%); } }
 
 /*--------------------------------------------------------------
 ## Pages
