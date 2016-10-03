@@ -129,7 +129,12 @@ function fireandice_fonts_url() {
 	 * into your own language.
 	 */
 	$vidaloka = esc_html_x( 'on', 'Vidaloka font: on or off', 'fireandice' );
-	$vollkorn = esc_html_x( 'on', 'Vollkorn font: on or off', 'fireandice' );
+
+	/* Translators: If there are characters in your language that are not
+	 * supported by Karla, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$karla = esc_html_x( 'on', 'Karla font: on or off', 'fireandice' );
 
 	$font_families = array();
 
@@ -137,8 +142,8 @@ function fireandice_fonts_url() {
 		$font_families[] = 'Vidaloka';
 	}
 
-	if ( 'off' !== $vollkorn ) {
-		$font_families[] = 'Vollkorn:400,400i,700,700i';
+	if ( 'off' !== $karla ) {
+		$font_families[] = 'Karla:400,400i,700,700i';
 	}
 
 	$query_args = array(
