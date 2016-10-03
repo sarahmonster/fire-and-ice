@@ -664,9 +664,10 @@ body {
 
 .entry-title {
   color: #fff;
+  font-size: 2.7em;
   position: absolute;
   top: 20px;
-  left: -20px;
+  left: 20px;
   transform: perspective(1px) rotate(-5deg);
   line-height: 1.8; }
   .entry-title span {
@@ -693,6 +694,13 @@ body {
     margin-bottom: -10px;
     vertical-align: top;
     width: 40%; }
+  .entry-title {
+    left: auto;
+    right: -20px;
+    text-align: right; }
+  .entry-meta {
+    right: 20px;
+    left: auto; }
   .post-thumbnail img {
     height: 100vh; }
   .fireandice-content {
