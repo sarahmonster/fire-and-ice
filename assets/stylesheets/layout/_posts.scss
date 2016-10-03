@@ -43,7 +43,7 @@
 }
 
 .entry-title {
-	color: white;
+	color: $color__white;
 	position: absolute;
 		top: $size__site-gutter;
 		left: -$size__site-gutter;
@@ -59,14 +59,14 @@
 }
 
 .entry-meta {
-	color: white;
+	color: $color__white;
 	position: absolute;
 		top: $size__site-gutter;
 		left: $size__site-gutter;
 	transform: perspective(1px) rotate(-5deg);
 
 	a {
-		color: white;
+		color: $color__white;
 		text-decoration: none;
 	}
 }
@@ -85,9 +85,27 @@
 			height: 100vh;
 	}
 
-	.entry-content {
+	.fireandice-content {
 		display: inline-block;
 		padding: $size__site-gutter*4 $size__site-gutter*2;
 		width: calc(99% - #{$size__site-sidebar});
 	}
+}
+
+/* Tags */
+.tags-links, .cat-links {
+	margin-right: 4px;
+
+	a {
+		background: $color__link;
+		color: $color__white;
+		@include font-size(0.9);
+		padding: .125rem .25rem;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+}
+
+.cat-links a {
+	background: $color__primary;
 }

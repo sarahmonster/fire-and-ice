@@ -40,16 +40,16 @@ if ( ! function_exists( 'fireandice_entry_footer' ) ) :
 function fireandice_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
+		/* translators: used between list items, there is a space between */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'fireandice' ) );
 		if ( $categories_list && fireandice_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'fireandice' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">%s</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'fireandice' ) );
+		/* translators: used between list items, there is a space between */
+		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'fireandice' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'fireandice' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">%s</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
