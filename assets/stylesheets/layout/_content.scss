@@ -22,22 +22,3 @@
 .site-content {
   background: $color__background-body;
 }
-
-// For landscape-oriented sites, move entry header info to the left-hand side
-@include landscape {
-  .site-content {
-    position: relative;
-  }
-
-  .entry-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: $size__site-sidebar;
-  }
-
-  .site-main {
-    margin-left: $size__site-sidebar + 10px;
-    //margin-left: calc(#{$size__site-sidebar} + #{$size__site-gutter});
-  }
-}

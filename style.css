@@ -580,11 +580,11 @@ table {
 # Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #ED3463; }
   a:visited {
-    color: purple; }
+    color: #ED3463; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #2C315E; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -626,17 +626,6 @@ body {
 .site-content {
   background: #fff; }
 
-@media (orientation: landscape) {
-  .site-content {
-    position: relative; }
-  .entry-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 33%; }
-  .site-main {
-    margin-left: calc(33% + 20px); } }
-
 /*--------------------------------------------------------------
 ## Posts
 --------------------------------------------------------------*/
@@ -661,8 +650,34 @@ body {
 .entry-summary {
   margin: 1.5em 0 0; }
 
+/* Arrange entry header */
 .entry-header {
-  background: #9c0; }
+  position: relative; }
+
+.post-thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.entry-title {
+  background: #2C315E;
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  -ms-transform: skew(0, -7deg);
+  transform: skew(0, -7deg);
+  left: 10px; }
+
+@media (orientation: landscape) {
+  .entry-header {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%; }
+  .entry-content {
+    display: inline-block;
+    padding-left: 20px;
+    width: calc(99% - 33%); } }
 
 /*--------------------------------------------------------------
 ## Pages
