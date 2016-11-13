@@ -659,8 +659,13 @@ body {
   text-align: center; }
   .post-thumbnail img {
     height: 40vh;
-    width: auto;
-    max-width: none; }
+    -webkit-filter: url(#duotone);
+    filter: url(#duotone);
+    max-width: none;
+    width: auto; }
+
+.fireandice-filter {
+  color-interpolation-filters: sRGB; }
 
 .entry-title {
   color: #fff;

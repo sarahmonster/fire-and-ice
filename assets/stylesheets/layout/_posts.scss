@@ -37,9 +37,14 @@
 
 	img {
 		height: 40vh;
-		width: auto;
+		filter: url(#duotone);
 		max-width: none;
+		width: auto;
 	}
+}
+
+.fireandice-filter {
+	color-interpolation-filters: sRGB;
 }
 
 .entry-title {
@@ -94,7 +99,7 @@
 	}
 
 	.post-thumbnail img {
-			height: 100vh;
+		height: 100vh;
 	}
 
 	.fireandice-content {

@@ -183,6 +183,7 @@ function fireandice_scripts() {
 	wp_enqueue_style( 'fireandice-fonts', fireandice_fonts_url(), array(), null );
 
 	wp_enqueue_script( 'fireandice-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'fireandice-duotone', get_template_directory_uri() . '/assets/js/duotone.js', array(), '20161113', true );
 
 	wp_enqueue_script( 'fireandice-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
